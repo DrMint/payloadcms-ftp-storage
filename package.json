@@ -1,6 +1,6 @@
 {
   "name": "payloadcms-ftp-storage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "FTP adapter for Payload CMS's plugin-cloud-storage plugin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
