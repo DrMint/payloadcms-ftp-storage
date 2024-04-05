@@ -1,9 +1,18 @@
 {
   "name": "payloadcms-ftp-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FTP adapter for Payload CMS's plugin-cloud-storage plugin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "copyfiles -u 1 src/mock.js dist",
+    "prepack": "npm run build && npm run postbuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrMint/payloadcms-ftp-storage.git"
+  },
   "files": [
     "dist"
   ],
@@ -12,5 +21,8 @@
   "peerDependencies": {
     "@payloadcms/plugin-cloud-storage": "^1.1.2",
     "basic-ftp": "^5.0.5"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
   }
 }
